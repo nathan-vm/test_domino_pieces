@@ -8,7 +8,7 @@
             "HTMLPiece"
         ],
         "secrets": [],
-        "source_image": "ghcr.io/enter-your-registry-name-here/enter-your-repository-name-here:0.1.1-group0"
+        "source_image": "ghcr.io/test_domino_pieces/test_domino_pieces:0.2.0-group0"
     },
     "group1": {
         "dependency": {
@@ -19,6 +19,6 @@
             "PDFPiece"
         ],
         "secrets": [],
-        "source_image": "ghcr.io/enter-your-registry-name-here/enter-your-repository-name-here:0.1.1-group1"
+        "source_image": "ghcr.io/test_domino_pieces/test_domino_pieces:0.2.0-group1"
     }
 }
