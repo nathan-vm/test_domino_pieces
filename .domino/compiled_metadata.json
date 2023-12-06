@@ -47,20 +47,14 @@
         },
         "output_schema": {
             "properties": {
-                "base64_content": {
+                "html": {
                     "description": "HTML result",
-                    "title": "Base64 Content",
-                    "type": "string"
-                },
-                "file_type": {
-                    "description": "HTML result",
-                    "title": "File Type",
+                    "title": "Html",
                     "type": "string"
                 }
             },
             "required": [
-                "base64_content",
-                "file_type"
+                "html"
             ],
             "title": "OutputModel",
             "type": "object"
@@ -116,20 +110,14 @@
         },
         "output_schema": {
             "properties": {
-                "base64_content": {
+                "pdf": {
                     "description": "PDF result",
-                    "title": "Base64 Content",
-                    "type": "string"
-                },
-                "file_type": {
-                    "description": "PDF result",
-                    "title": "File Type",
+                    "title": "Pdf",
                     "type": "string"
                 }
             },
             "required": [
-                "base64_content",
-                "file_type"
+                "pdf"
             ],
             "title": "OutputModel",
             "type": "object"
