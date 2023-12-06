@@ -1,6 +1,6 @@
 {
-    "ExampleSimplePiece": {
-        "name": "ExampleSimplePiece",
+    "HTMLPiece": {
+        "name": "HTMLPiece",
         "dependency": {
             "dockerfile": null,
             "requirements_file": "requirements_0.txt"
@@ -9,13 +9,13 @@
             "Example"
         ],
         "style": {
-            "node_label": "Simple Piece",
+            "node_label": "HTMLPiece",
             "node_type": "default",
             "node_style": {
                 "backgroundColor": "#ebebeb"
             },
             "useIcon": true,
-            "icon_class_name": "fas fa-database",
+            "icon_class_name": "fa-solid:database",
             "iconStyle": {
                 "cursor": "pointer"
             }
@@ -23,88 +23,106 @@
         "description": "This is an example of a simple Domino Piece",
         "container_resources": {
             "requests": {
-                "cpu": "100m",
-                "memory": "128Mi"
+                "cpu": 100,
+                "memory": 128
             },
             "limits": {
-                "cpu": "500m",
-                "memory": "512Mi"
+                "cpu": 500,
+                "memory": 512
             }
         },
         "input_schema": {
-            "title": "InputModel",
-            "type": "object",
             "properties": {
-                "distribution_name": {
-                    "description": "Name of the distribution to sample from",
-                    "allOf": [
-                        {
-                            "$ref": "#/definitions/DistributionType"
-                        }
-                    ]
-                },
-                "distribution_mean": {
-                    "title": "Distribution Mean",
-                    "description": "Distribution mean",
-                    "type": "number"
-                },
-                "distribution_sd": {
-                    "title": "Distribution Sd",
-                    "description": "Distribution standard deviation",
-                    "default": 1.0,
-                    "exclusiveMinimum": 0.0,
-                    "type": "number"
+                "html_title": {
+                    "description": "title for html",
+                    "title": "Html Title",
+                    "type": "string"
                 }
             },
             "required": [
-                "distribution_name",
-                "distribution_mean"
+                "html_title"
             ],
-            "definitions": {
-                "DistributionType": {
-                    "title": "DistributionType",
-                    "description": "An enumeration.",
-                    "enum": [
-                        "gaussian",
-                        "poisson"
-                    ],
-                    "type": "string"
-                }
-            }
+            "title": "InputModel",
+            "type": "object"
         },
         "output_schema": {
+            "properties": {
+                "html": {
+                    "description": "HTML result",
+                    "title": "Html",
+                    "type": "string"
+                }
+            },
+            "required": [
+                "html"
+            ],
             "title": "OutputModel",
-            "type": "object",
-            "properties": {
-                "message": {
-                    "title": "Message",
-                    "description": "Output message to log",
-                    "type": "string"
-                },
-                "sample_result": {
-                    "title": "Sample Result",
-                    "description": "The result of this Piece's processing",
-                    "type": "string"
-                }
-            },
-            "required": [
-                "message",
-                "sample_result"
-            ]
+            "type": "object"
         },
-        "secrets_schema": {
-            "title": "SecretsModel",
-            "type": "object",
+        "secrets_schema": null,
+        "source_url": "https://github.com/nathan-vm/test_domino_pieces/tree/main/pieces/HTMLPiece"
+    },
+    "PDFPiece": {
+        "name": "PDFPiece",
+        "dependency": {
+            "dockerfile": null,
+            "requirements_file": "requirements_1.txt"
+        },
+        "tags": [
+            "Example"
+        ],
+        "style": {
+            "node_label": "PDF Piece",
+            "node_type": "default",
+            "node_style": {
+                "backgroundColor": "#ebebeb"
+            },
+            "useIcon": true,
+            "icon_class_name": "fa-solid:database",
+            "iconStyle": {
+                "cursor": "pointer"
+            }
+        },
+        "description": "This is an example of a PDF Piece",
+        "container_resources": {
+            "requests": {
+                "cpu": 100,
+                "memory": 128
+            },
+            "limits": {
+                "cpu": 500,
+                "memory": 512
+            }
+        },
+        "input_schema": {
             "properties": {
-                "EXAMPLE_OPERATOR_SECRET_1": {
-                    "title": "Example Operator Secret 1",
-                    "description": "A secret necessary to run this Piece",
+                "pdf_title": {
+                    "description": "description",
+                    "title": "Pdf Title",
                     "type": "string"
                 }
             },
             "required": [
-                "EXAMPLE_OPERATOR_SECRET_1"
-            ]
-        }
+                "pdf_title"
+            ],
+            "title": "InputModel",
+            "type": "object"
+        },
+        "output_schema": {
+            "properties": {
+                "pdf": {
+                    "description": "Output PDF",
+                    "title": "Pdf",
+                    "type": "string"
+                }
+            },
+            "required": [
+                "pdf"
+            ],
+            "title": "OutputModel",
+            "type": "object"
+        },
+        "secrets_schema": null,
+        "source_url": "https://github.com/nathan-vm/test_domino_pieces/tree/main/pieces/PDFPiece"
     }
 }
