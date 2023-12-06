@@ -1,0 +1,24 @@
+{
+    "name": "PDFPiece",
+    "description": "This is an example of a PDF Piece",
+    "dependency": {
+        "requirements_file": "requirements_1.txt"
+    },
+    "container_resources": {
+        "requests": {
+            "cpu": 100,
+            "memory": 128
+        },
+        "limits": {
+            "cpu": 500,
+            "memory": 512
+        }
+    },
+    "tags": [
+        "Example"
+    ],
+    "style": {
+        "node_label": "PDF Piece",
+        "icon_class_name": "fa-solid:database"
+    }
+}
