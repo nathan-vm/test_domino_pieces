@@ -8,7 +8,7 @@
             "HTMLPiece"
         ],
         "secrets": [],
-        "source_image": "ghcr.io/nathan-vm/test_domino_pieces:0.2.5-group0"
+        "source_image": "ghcr.io/nathan-vm/test_domino_pieces:0.2.7-group0"
     },
     "group1": {
         "dependency": {
@@ -19,6 +19,6 @@
             "PDFPiece"
         ],
         "secrets": [],
-        "source_image": "ghcr.io/nathan-vm/test_domino_pieces:0.2.5-group1"
+        "source_image": "ghcr.io/nathan-vm/test_domino_pieces:0.2.7-group1"
     }
 }
