@@ -1,6 +1,6 @@
 from domino.base_piece import BasePiece
 from .models import InputModel, OutputModel
-
+import base64
 class HTMLPiece(BasePiece):
     
     def piece_function(self, input_data: InputModel ):
@@ -19,10 +19,13 @@ class HTMLPiece(BasePiece):
         </html>
         """
 
+        base64_html = base64.b64encode(html_content.encode('utf-8')).decode('utf-8')
+
         self.display_result = {
             "file_type": "html",
-            "base64_content": html_content
+            "base64_content": base64_html
         }
+
 
         return OutputModel(
             html=html_content,
