@@ -5,9 +5,6 @@ class InputModel(BaseModel):
     )
 
 class OutputModel(BaseModel):
-    base64_content: str = Field(
-        description="HTML result"
-    )
-    file_type: str = Field(
+    html: str = Field(
         description="HTML result"
     )

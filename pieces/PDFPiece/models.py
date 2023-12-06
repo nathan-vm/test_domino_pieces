@@ -7,9 +7,6 @@ class InputModel(BaseModel):
 
 
 class OutputModel(BaseModel):
-    base64_content: str = Field(
-        description="PDF result"
-    )
-    file_type: str = Field(
+    pdf: str = Field(
         description="PDF result"
     )

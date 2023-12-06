@@ -18,7 +18,12 @@ class HTMLPiece(BasePiece):
         </body>
         </html>
         """
+
+        self.display_result = {
+            "file_type": "html",
+            "base64_content": html_content
+        }
+
         return OutputModel(
-            base64_content=html_content,
-            file_type="html"
+            html=html_content,
         )

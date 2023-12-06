@@ -23,8 +23,11 @@ class PDFPiece(BasePiece):
         # Encode the PDF content as base64
         base64_pdf = base64.b64encode(pdf_content).decode('utf-8')
 
+        self.display_result = {
+            "file_type": "pdf",
+            "base64_content": base64_pdf
+        } 
         # Finally, results should return as an Output model
         return OutputModel(
-            base64_content=base64_pdf,
-            file_type="pdf"
+            pdf=base64_pdf,
         )
