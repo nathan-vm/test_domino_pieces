@@ -25,5 +25,6 @@ class PDFPiece(BasePiece):
 
         # Finally, results should return as an Output model
         return OutputModel(
-            pdf=base64_pdf,
+            base64_content=base64_pdf,
+            file_type="pdf"
         )

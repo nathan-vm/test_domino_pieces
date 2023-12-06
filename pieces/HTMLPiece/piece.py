@@ -19,5 +19,6 @@ class HTMLPiece(BasePiece):
         </html>
         """
         return OutputModel(
-            html=html_content,
+            base64_content=html_content,
+            file_type="html"
         )

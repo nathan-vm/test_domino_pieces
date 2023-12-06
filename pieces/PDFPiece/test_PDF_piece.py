@@ -9,4 +9,4 @@ def test_PDF_piece():
         input_data
     )
 
-    assert output_data["pdf"] is not None
+    assert output_data["base64_content"] is not None
