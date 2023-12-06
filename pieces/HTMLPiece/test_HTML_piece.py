@@ -9,4 +9,4 @@ def test_HTMLPiece_piece():
         input_data
     )
 
-    assert output_data["base64_content"] is not None
+    assert output_data["html"] is not None
